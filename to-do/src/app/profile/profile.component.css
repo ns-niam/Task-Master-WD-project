@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.photo-frame {
+  margin-left: 30px;
+  margin-top: 30px;
+  width: 300px; /* Ширина рамки */
+  height: 200px; /* Высота рамки */
+  border: 2px dashed black; /* Стиль рамки: пунктирная */
+  border-radius: 30px; /* Для круглой формы */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Если изображение превысит размеры рамки, скрываем его */
+}
+
+.photo-frame img {
+  max-width: 100%; /* Чтобы фотография внутри рамки не выходила за ее пределы */
+  max-height: 100%;
+  border-radius: 10px; /* Для круглой формы фотографии */
+}
+
+#add-file{
+  width: 250px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 10px;
+  padding: 10px 30px;
+  /*margin: 30px;*/
+  margin-top: 10px;
+  margin-left: 30px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+
+#icon{
+  width: 10%;
+  position: relative;
+  right: -1200px;
+  top: -320px;
+}
+
+#header {
+  position: relative;
+  font-size: 45px;
+  right: -1130px;
+  top: -130px;
+}
+
+.info{
+  padding: 30px;
+  position: relative;
+  right: -450px;
+  top: -460px;
+}
+
+#name, #surname, #email, #password, #team {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border: solid black 1px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+input[type="text"],
+input[type="email"]{
+  padding: 10px;
+  font-size: 14px;
+}
+
+
+.change-info{
+  border: none;
+  background-color: white;
+}
+
+#save-button{
+  position: relative;
+  top: -50px;
+  left: 150px;
+  margin: 15px;
+  width: 35px;
+}
+
+#save-text{
+  position: relative;
+  top: -70px;
+  left: 150px;
+}
+
+#edit-button {
+  position: relative;
+  top: -110px;
+  left: 0px;
+  width: 65px;
+}
+
+#edit-text{
+  position: relative;
+  top: -115px;
+  left: 0px;
+}
+
+#save-button:hover, #edit-button:hover{
+  opacity: 70%;
+}
+
+#newUrl{
+  margin-left: 40px;
+  margin-top: 15px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  border: gray ;
+
+
+}
+
+#newUrl:focus{
+  border: black;
+}
+
+#upd-button{
+  border-radius: 8px;
+  border: none;
+  height: 35px;
+  color: white;
+  background-color: black;
+  margin-left: 20px;
+  width: 70px;
+}

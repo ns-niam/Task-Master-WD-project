@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Create new tasks for yourself!</h1>
+  <form (ngSubmit)="addTask()">
+    <label for="selectFolder" id="selectFolder-text" >Select folder:</label>
+    <select id="selectFolder" name="selectFolder" class="select-folders" [(ngModel)]="folder">
+      <option value="" disabled selected hidden>Choose folder</option>
+      <option *ngFor="let i of folders">
+        {{i.name}}
+      </option>
+    </select>
+    <br><br>
+    <label for="deadline">Set the deadline:</label>
+    <input type="date" id="deadline" name="deadline" [(ngModel)]="deadline">
+    <br><br>
+    <label for="title">Set the title:</label>
+    <input type="text" id="title" name="title" placeholder="Title of your task..." [(ngModel)]="title">
+    <br><br>
+    <label for="task">Enter task:</label>
+    <textarea id="task" name="task" rows="4" cols="50" placeholder="Type task here..." [(ngModel)]="taskText"></textarea>
+    <br>
+<!--    <label for="attachment">Attach files (optional)</label>-->
+<!--    <input type="file" id="attachment" name="attachment" placeholder="Type task here..." [(ngModel)]="file">-->
+    <button type="submit" id="add-task-button">Add Task</button>
+  </form>
+</div>

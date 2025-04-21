@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+h1 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.container {
+    top: 450px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    width: 768px;
+    max-width: 100%;    
+    min-height: 580px;
+}
+
+.container button {
+    background-color: #000000;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    margin: 20px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30px;
+    border-bottom: none;
+    box-shadow: inset 0 10px -10px rgba(0, 0, 0, 0.35);
+    padding: 0 60px;
+    height: 100%;
+}
+
+.container input {
+    background-color: #f3f2f2;
+    margin: 8px 0;
+    padding: 10px 15px;
+    height: 35px;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    /* чтобы занимать всю доступную ширину */
+    box-sizing: border-box;
+    /* чтобы полностью соответствовать размерам контейнера */
+}
+
+.container button:hover {
+    opacity: 80%;
+}
+
+.container input:focus {
+    border: solid black 1px;
+}
+
+input placeholder {
+    margin: 10px;
+}
+
+@keyframes move {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+#teammate-array{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    min-height: auto;
+    width: 100%;
+}
+
+#add{
+    width: fit-content;
+    margin: 10px auto;
+}
+

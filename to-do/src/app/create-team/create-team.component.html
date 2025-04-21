@@ -1,0 +1,16 @@
+<div class="container">
+    <form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
+        <h1>Create Team</h1>
+        <br>
+        <label id="team"for="team-name">Team name:</label>
+        <input id="team-name" type="text" formControlName="teamName" placeholder="Team name">
+        <div id="teammate-array" formArrayName="teammates"><br>
+            <label for="teammate" id="team-email">Teammate usernames:</label>
+            <div *ngFor="let teammate of teammates.controls; let i = index">
+                <input id="teammate" type="text" [formControlName]="i" placeholder="Teammate username">
+            </div>
+            <button id="add" type="button" (click)="addTeammate()">Add teammate</button>
+        </div>
+        <button id="submit" type="submit">Create team</button>
+    </form>
+</div>

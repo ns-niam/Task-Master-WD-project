@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <ng-container *ngIf="Boolean(localStorage.getItem('logged'))">
+    <body>
+      <div class="navbar">
+        <!-- <div
+          class="nav-item"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a [routerLink]="['/home']"
+            ><img
+              alt="image"
+              src="https://static.vecteezy.com/system/resources/previews/017/609/000/original/minimal-house-icon-website-symbol-site-sign-ui-home-icon-home-creative-icon-minimalist-vector.jpg"
+              width="5%"
+          /></a>
+          <p>Home</p>
+        </div> -->
+
+        <div
+          class="nav-item"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a [routerLink]="['/notifications']"
+            ><img
+              id="notif"
+              alt="image"
+              src="https://cdn-icons-png.flaticon.com/512/3119/3119338.png"
+              width="5%"
+              class="notifications"
+          /></a>
+          <p>Notifications</p>
+        </div>
+
+        <div
+          class="nav-item"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a [routerLink]="['/create-task']"
+            ><img
+              alt="image"
+              src="https://static.vecteezy.com/system/resources/previews/016/895/355/non_2x/add-circle-icon-line-isolated-on-white-background-black-flat-thin-icon-on-modern-outline-style-linear-symbol-and-editable-stroke-simple-and-pixel-perfect-stroke-illustration-vector.jpg"
+              width="5%"
+          /></a>
+          <p>Create Task</p>
+        </div>
+        <div
+          class="nav-item"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a [routerLink]="['/personal-tasks']"
+            ><img
+              alt="image"
+              src="https://static.vecteezy.com/system/resources/previews/016/895/137/non_2x/person-icon-line-isolated-on-white-background-black-flat-thin-icon-on-modern-outline-style-linear-symbol-and-editable-stroke-simple-and-pixel-perfect-stroke-illustration-vector.jpg"
+              width="5%"
+          /></a>
+          <p>Personal Tasks</p>
+        </div>
+        <div
+          class="nav-item"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a [routerLink]="['/team-tasks']"
+            ><img
+              alt="image"
+              src="https://cdn.iconscout.com/icon/free/png-256/free-team-1767042-1505448.png"
+              width="7%"
+          /></a>
+          <p>Team Tasks</p>
+        </div>
+        <div
+          class="nav-item"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a [routerLink]="['/task-calendar']"
+            ><img
+              alt="image"
+              src="https://static.vecteezy.com/system/resources/previews/016/895/097/non_2x/calendar-icon-line-isolated-on-white-background-black-flat-thin-icon-on-modern-outline-style-linear-symbol-and-editable-stroke-simple-and-pixel-perfect-stroke-illustration-vector.jpg"
+              width="5%"
+          /></a>
+          <p>Task Calendar</p>
+        </div>
+        <div
+          class="nav-item"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a [routerLink]="['/lead-page']"
+            ><img
+              alt="image"
+              src="https://static.vecteezy.com/system/resources/previews/019/052/953/non_2x/manager-key-point-icon-outline-business-word-vector.jpg"
+              width="5%"
+          /></a>
+          <p>Lead Page</p>
+        </div>
+
+        <div
+          class="nav-item"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a [routerLink]="['/create-team']"
+            ><img
+              alt="image"
+              src="https://cdn0.iconfinder.com/data/icons/user-24x24-pixel/24/users_team_customer_group_profile_add_create_new-512.png"
+              width="5%"
+              class="create-team"
+          /></a>
+          <p>Create team</p>
+        </div>
+
+        <div
+          class="nav-item"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a [routerLink]="['/profile']"
+            ><img
+              alt="image"
+              src="https://static.vecteezy.com/system/resources/previews/017/066/800/non_2x/user-account-icon-line-isolated-on-white-background-black-flat-thin-icon-on-modern-outline-style-linear-symbol-and-editable-stroke-simple-and-pixel-perfect-stroke-illustration-vector.jpg"
+              width="5%"
+          /></a>
+          <p>Profile</p>
+        </div>
+        <div
+          class="nav-item"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a [routerLink]="['/auth']"
+            ><img
+              alt="image"
+              src="https://static.vecteezy.com/system/resources/previews/016/895/065/original/login-line-icon-isolated-on-white-background-black-flat-thin-icon-on-modern-outline-style-linear-symbol-and-editable-stroke-simple-and-pixel-perfect-stroke-illustration-vector.jpg"
+              width="5%"
+          /></a>
+          <p>Log in/out</p>
+        </div>
+      </div>
+    </body>
+  </ng-container>
+
+  <ng-container *ngIf="!Boolean(localStorage.getItem('logged'))">
+    <div class="navbar">
+      <div
+        class="nav-item"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <a [routerLink]="['/auth']"
+          ><img
+            alt="image"
+            src="https://static.vecteezy.com/system/resources/previews/016/895/065/original/login-line-icon-isolated-on-white-background-black-flat-thin-icon-on-modern-outline-style-linear-symbol-and-editable-stroke-simple-and-pixel-perfect-stroke-illustration-vector.jpg"
+            width="5%"
+        /></a>
+        <p>Log in/out</p>
+      </div>
+    </div>
+  </ng-container>
+  <router-outlet />
+</html>

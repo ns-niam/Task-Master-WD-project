@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.persontal_tasks_body {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  height: 100vh;
+  background-color: white;
+}
+
+.create_task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.create_task input {
+  display: inline-block;
+  padding: 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.create_task button {
+  display: inline-block;
+  padding: 16px 24px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.folders_tasks {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.folders_list,
+.tasks_list {
+  background-color: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.folders_list {
+  margin-right: 16px;
+  width: 20%;
+}
+
+.tasks_list {
+  width: 80%;
+}
+
+.folders_list ul,
+.tasks_list ul {
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.folders_list ul:hover,
+.tasks_list ul:hover {
+  background-color: #5eeb5b;
+}
+
+.folders_list ul {
+  list-style: none;
+  width: 100%;
+}
+
+.folders_list ul button {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #f0f0f0; /* Change this to the desired background color */
+}
+
+.folder-icon {
+  width: 20px; /* Adjust as needed */
+  height: 20px; /* Adjust as needed */
+  background-image: url("folder.svg"); /* Replace 'path_to_your_folder_icon.svg' with the actual path to your SVG icon */
+  background-size: cover;
+  display: inline-block;
+  margin-right: 12px; /* Adjust as needed to add space between the icon and the folder name */
+}
+
+.remove-button {
+  margin-left: 40px;
+}
+.folder-input {
+  width: 20%;
+}
+
+.folder-info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.task-title {
+  font-size: 20px;
+}
+.task-text {
+  font-size: 16px;
+}
+
+.task-deadline {
+  font-size: 16px;
+  margin-bottom: 8px;
+}

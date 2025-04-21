@@ -1,0 +1,28 @@
+<div>
+  <div class="photo-frame" id="photo-frame">
+    <img [src]="photoUrl" alt="Preview">
+  </div>
+  <input [disabled]="isDisabled" id="newUrl" type="text" placeholder="Place your url here" [(ngModel)]="newUrl">
+  <button (click)="updateUrl()" id="upd-button">Update</button>
+</div>
+<div>
+  <h1 id="header">TO-DO APP</h1>
+  <img id="icon" src="https://static-00.iconduck.com/assets.00/microsoft-todo-icon-1024x810-wbyx7rbk.png" alt="img">
+  <div class="info">
+    <h1>Your Profile</h1>
+    <br>
+    <form (ngSubmit)="sendChanges()">
+      <label for="name">First name</label> <br>
+      <input [disabled]="isDisabled" type="text" id="name" name="name" [(ngModel)]="name"><br>
+      <label for="name">Last name</label> <br>
+      <input [disabled]="isDisabled" type="text" id="surname" name="surname" [(ngModel)]="surname"><br>
+      <label for="team">Team</label> <br>
+      <input  type="text" id="team" name="team" [(ngModel)]="team"><br>
+      <label for="email">email</label> <br>
+      <input [disabled]="isDisabled" type="email" id="email" name="email" [(ngModel)]="email"><br>
+    <br><br><button class="change-info" type="submit"><img alt="img" id="save-button" src="https://static-00.iconduck.com/assets.00/save-icon-512x512-552twxqx.png"><span id="save-text">SAVE CHANGES</span></button>
+    </form>
+    <button class="change-info" (click)="edit()"><img alt="img" id="edit-button" src="https://static.vecteezy.com/system/resources/thumbnails/019/552/595/small/sign-up-icon-signup-square-box-on-transparent-background-free-png.png"><span id="edit-text">EDIT</span></button> &nbsp;&nbsp;
+
+  </div>
+</div>

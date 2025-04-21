@@ -1,0 +1,6 @@
+<div class="container">
+    <h1>Notifications</h1>
+    <ul class="notifications">
+        <li *ngFor="let notification of notifications">{{ notification.message }} {{notification.created_at}}</li>
+    </ul>
+</div>

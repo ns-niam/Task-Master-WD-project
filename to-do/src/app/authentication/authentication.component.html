@@ -1,0 +1,50 @@
+<ng-container *ngIf="!Boolean(localStorage.getItem('logged'))">
+  <body>
+  <div class="container" [class.active]="containerActive">
+    <div class="form-container sign-up">
+      <form (ngSubmit)="signUp()">
+        <h1>Create Account</h1>
+        <input type="text" name="username" placeholder="Username" [(ngModel)]="username">
+        <input type="email" name="email" placeholder="Email" [(ngModel)]="email">
+        <input type="password" name="password" placeholder="Password" [(ngModel)]="password">
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+    <div class="form-container sign-in">
+      <form (ngSubmit)="login()">
+        <h1>Sign In</h1>
+        <input type="text" name="username" id="username" placeholder="Username" [(ngModel)]="username">
+        <input type="password" name="password" id="password" placeholder="Password" [(ngModel)]="password">
+        <button type="submit">Sign In</button>
+      </form>
+    </div>
+    <div class="toggle-container">
+      <div class="toggle">
+        <div class="toggle-panel toggle-left">
+          <h1>Welcome Back!</h1>
+          <p>Enter your personal details to see your tasks! </p>
+          <button (click)="toggleContainer()">Sign In</button>
+        </div>
+        <div class="toggle-panel toggle-right">
+          <h1>Hello, Friend!</h1>
+          <p>Register with your personal details to use all features of this App!</p>
+          <button (click)="toggleContainer()">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</ng-container>
+
+<ng-container *ngIf="Boolean(localStorage.getItem('logged'))">
+  <div class="container-logout">
+    <h1>
+      Congratulations! <br><br> Now you can use <br> all features of this App!
+    </h1>
+    <img src="favicon.ico">
+    <button (click)="logout()" >Logout</button>
+  </div>
+
+</ng-container>
+
+
